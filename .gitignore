@@ -10,7 +10,10 @@ data/content/*
 !data/db/DEFAULT_*.zip
 logfiles/*
 
-#Ignore everything in the root
+#Ignore WP core files
+wp/
+
+#Ignore everything in the web root
 htdocs/*
 !htdocs/content
 

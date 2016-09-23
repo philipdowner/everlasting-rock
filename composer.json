@@ -1,0 +1,44 @@
+{
+  "name": "Everlasting Rock",
+  "description": "A WordPress starter theme. Flexible, version-able and scalable.",
+  "homepage": "http://philipdowner.com",
+  "version": "0.9.0",
+  "license": "GPL-3.0+",
+  "repositories":[
+    {
+      "type":"composer",
+      "url":"https://wpackagist.org"
+    },
+		{
+		  "type": "package",
+		  "package": {
+		    "name": "advanced-custom-fields/advanced-custom-fields-pro",
+		    "version": "*",
+		    "type": "wordpress-plugin",
+		    "dist": {
+		      "type": "zip",
+		      "url": "https://connect.advancedcustomfields.com/index.php?p=pro&a=download"
+		    },
+		    "require": {
+		      "philippbaschke/acf-pro-installer": "^1.0",
+		      "composer/installers": "^1.0"
+		    }
+		  }
+		}
+  ],
+  "require": {
+    "php" : ">=5.5",
+    "advanced-custom-fields/advanced-custom-fields-pro": "*"
+    "wpackagist-plugin/akismet": "*",
+    "wpackagist-plugin/wordpress-importer": "*",
+    "wpackagist-plugin/safe-redirect-manager": "*"
+  },
+  "extra": {
+    "installer-paths": {
+      "content/plugins/{$name}/": ["type:wordpress-plugin"]
+    }
+  },
+  "suggest": {
+		"monolog/monolog": "Allows more advanced logging of the application flow"
+	}
+}
