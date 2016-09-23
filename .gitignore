@@ -1,0 +1,43 @@
+#Always ignore these general patterns
+.DS_Store
+sitemap.xml
+sitemap.xml.gz
+*.bak
+
+#Ignore db_backups and logs
+data/content/*
+!data/db/DEFAULT_*.sql
+!data/db/DEFAULT_*.zip
+logfiles/*
+
+#Ignore everything in the root
+htdocs/*
+!htdocs/content
+
+# Keep any utility, testing and verification files
+!htdocs/index.maintenance.php
+!htdocs/util-*.php
+!htdocs/enviro-*.php
+!htdocs/.htaccess.example
+!htdocs/google*.html
+!htdocs/pinterest-*.html
+
+# Ignore everything in the content directory
+htdocs/content/*
+
+# Keep custom-developed plugins
+!htdocs/content/plugins
+htdocs/content/plugins/*
+#!htdocs/content/plugins/manifest-*
+
+# Only keep the needed theme files
+!htdocs/content/themes
+htdocs/content/themes/*
+!htdocs/content/themes/everlasting-rock
+htdocs/content/themes/everlasting-rock/**/.sass-cache
+htdocs/content/themes/everlasting-rock/css
+htdocs/content/themes/everlasting-rock/inc/vendor
+htdocs/content/themes/everlasting-rock/js/dist
+htdocs/content/themes/everlasting-rock/bower_components
+htdocs/content/themes/everlasting-rock/node_modules
+htdocs/content/themes/everlasting-rock/*.map
